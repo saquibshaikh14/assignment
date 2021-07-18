@@ -20,7 +20,11 @@ function App() {
   let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if(isMobile)
     return (
-      <div className="text-center">Not compatible with mobile and tablet</div>
+      <div className="text-center">
+        Not compatible with mobile and tablet
+        <br/>
+        Try desktop mode to view in mobile.
+      </div>
     )
 
   return (
