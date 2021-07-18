@@ -85,14 +85,6 @@ const VideoView = (props) =>{
       recorder = RecordRTC(stream, {type: 'video'});
       recorder.startRecording();
       cam = stream;
-      // recorder.prototypes.closeCam = function () {
-      //   stream.getTracks().forEach(track=>{
-      //     track.stop();
-      //   })
-      //}
-
-      // setTimeout(()=>{recorder.stopRecording(b=>{videoElement.srcObject = null; videoElement.src=b;});}, 5000);
-      
 
     })
   }

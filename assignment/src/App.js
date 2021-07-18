@@ -17,6 +17,12 @@ import Video from './screens/Video';
 
 function App() {
 
+  let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if(isMobile)
+    return (
+      <div className="text-center">Not compatible with mobile and tablet</div>
+    )
+
   return (
 
     <Router>
