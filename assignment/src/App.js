@@ -1,20 +1,18 @@
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container} from 'react-bootstrap';
-
-
 
 import Sidebar from './components/Sidebar';
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 import Default from './screens/Default';
 import PDF from './screens/PDF';
+import PPT from './screens/PPT';
+import Video from './screens/Video';
 
 
 function App() {
@@ -26,6 +24,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Default} />
         <Route exact path="/pdf" component={PDF} />
+        <Route exact path="/ppt" component={PPT} />
+        <Route exact path="/video" component={Video}/>
         <Route path="*" render={()=>
           <div>
             Invalid url !

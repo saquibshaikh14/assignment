@@ -13,7 +13,7 @@ import {Document, Page} from 'react-pdf/dist/esm/entry.webpack';
 import {  FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 
 import Dropzone from '../components/Dropzone';
-import { func } from 'prop-types';
+
 
 
 
@@ -31,7 +31,6 @@ export default function PDF() {
 
 
   const onDropAccepted = useCallback(acceptedFile=>{
-    console.log(acceptedFile[0]);
     setFile(acceptedFile[0]);
   }, []);
 
@@ -56,6 +55,8 @@ export default function PDF() {
           //     </Document>
           // </div>
           <div className="view-container pdf">
+
+            {/* actions */}
             <div className="pdf-nav">
               <div className=" bg-dark text-white">
                 <button className="navigation-btn prev" disabled={activePage===1} onClick={()=>navigatePage(activePage - 1)}>
@@ -64,18 +65,26 @@ export default function PDF() {
                 <button className="navigation-btn next" disabled={activePage===totalPage} onClick={()=>navigatePage(activePage + 1)}>
                   <FaChevronRight/>
                   </button>
-                  <button className="navigation-btn close" onClick={()=>setFile(null)}>
+                  <button className="navigation-btn close" onClick={()=>{
+                      setFile(null);
+                      setActivePage(1);
+                      setTotalPage(0);
+                    }}>
                     <FaTimes/>
                   </button>
               </div>
             </div>
+
+            {/* preview */}
             <div className="pdf-view">
               <Document
                 file={pdfFile}
                 onLoadSuccess={({numPages})=>setTotalPage(numPages)}
                 loading="Page loading"
+                renderMode="svg"
                 >
-                  <Page pageNumber={activePage} />
+                  <Page pageNumber={activePage} renderTextLayer={false}
+                  />
                 </Document>
                 
             </div>

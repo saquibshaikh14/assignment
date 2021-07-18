@@ -23,6 +23,7 @@
 .sidebar a:hover{
   color: rgb(197, 196, 196);
 }
+/* ------------ */
 div.main{
   flex-grow: 1;
   /* white-space: nowrap; */
@@ -30,6 +31,7 @@ div.main{
   overflow: hidden;
 }
 
+/* ---drag n drop--- */
 .dropzone{
   width: 50%;
   padding: 5% 0;
@@ -40,6 +42,9 @@ div.main{
   background-color: rgba(0,0,0,0.1);
 }
 
+/* --drag n drop ends--- */
+
+/* ---pdf screen--- */
 .view-container.pdf{
   position: relative;
   height: 100%;
@@ -75,13 +80,49 @@ div.main{
 }
 
 .pdf-view{
-  margin-top: 60px;
-  margin-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background: rgba(0,0,0,0.1);
 }
 
 
-.react-pdf__Page__canvas{
+.react-pdf__Page__svg{
   margin: 0 auto;
-  border: 2px solid #ddd;
+  /* border: 2px solid #ddd; */
 }
 
+
+/* ---pdf screen ends--- */
+
+/* ---video screen--- */
+/* .main video{
+  max-height: 480px;
+  max-width: 640px;
+} */
+
+.video.before-capture{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.video .btn-start{
+  color: #fff;
+  border-radius: 8px;
+  border: transparent;
+  padding: 10px 20px;
+  text-transform: capitalize;
+}
+.video .btn-start:hover{
+  background-color: #333333!important;
+}
+
+.video-container{
+  height: 100%;
+  overflow: auto;
+}
+
+video.video-player{
+  max-width: 640px;
+  max-height: 480px;
+}
