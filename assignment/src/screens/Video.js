@@ -130,7 +130,7 @@ const VideoView = (props) =>{
       </div>
       <div  className="text-center">
         <button onClick={restartRecording}>Restart Recording</button>
-        <button disabled={!!recordedVideo} onClick={stopRecording}>Stop Recodring</button>
+        <button disabled={!!recordedVideo} onClick={stopRecording}>Stop Recording</button>
         <button disabled={!!!recordedVideo} onClick={playRecording}>Preview Recording</button>
       </div>
     </div>
