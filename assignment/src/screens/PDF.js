@@ -13,6 +13,7 @@ import {Document, Page} from 'react-pdf/dist/esm/entry.webpack';
 import {  FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 
 import Dropzone from '../components/Dropzone';
+import styles from '../styles/pdf.module.css';
 
 
 
@@ -54,18 +55,18 @@ export default function PDF() {
           //       renderTextLayer/>
           //     </Document>
           // </div>
-          <div className="view-container pdf">
+          <div className={`${styles.viewContainer} ${styles.pdf}`}>
 
             {/* actions */}
-            <div className="pdf-nav">
+            <div className={styles.pdfNav}>
               <div className=" bg-dark text-white">
-                <button className="navigation-btn prev" disabled={activePage===1} onClick={()=>navigatePage(activePage - 1)}>
+                <button className={styles.navigationBtn} disabled={activePage===1} onClick={()=>navigatePage(activePage - 1)}>
                   <FaChevronLeft/>
                 </button>
-                <button className="navigation-btn next" disabled={activePage===totalPage} onClick={()=>navigatePage(activePage + 1)}>
+                <button className={styles.navigationBtn} disabled={activePage===totalPage} onClick={()=>navigatePage(activePage + 1)}>
                   <FaChevronRight/>
                   </button>
-                  <button className="navigation-btn close" onClick={()=>{
+                  <button className={styles.navigationBtn} onClick={()=>{
                       setFile(null);
                       setActivePage(1);
                       setTotalPage(0);
@@ -76,7 +77,7 @@ export default function PDF() {
             </div>
 
             {/* preview */}
-            <div className="pdf-view">
+            <div className={styles.pdfView}>
               <Document
                 file={pdfFile}
                 onLoadSuccess={({numPages})=>setTotalPage(numPages)}

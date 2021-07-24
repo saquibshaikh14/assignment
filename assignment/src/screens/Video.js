@@ -8,6 +8,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import RecordRTC from 'recordrtc';
 
+import styles from '../styles/video.module.css';
+
+
 const Video = () =>{
 
   const [previewVideo, setPreviewVideo] = useState(null);
@@ -43,8 +46,8 @@ const Video = () =>{
         {previewVideo?(
           <VideoView previewVideo={previewVideo}/>
         ):(
-          <div className="video before-capture">
-            <button className="btn-start bg-dark" onClick={startWebCam}>start recording
+          <div className={`${styles.video} ${styles.beforeCapture}`}>
+            <button className={`${styles.btnStart} bg-dark`} onClick={startWebCam}>start recording
             </button>
           </div>
         )}
@@ -65,6 +68,7 @@ const getMedia = (cb) =>{
 
 var recorder = null;
 let cam = null;
+
 const VideoView = (props) =>{
 
   const videoRef = useRef();
@@ -124,9 +128,9 @@ const VideoView = (props) =>{
   }, [props.previewVideo]);
 
   return (
-    <div className="video-container">
+    <div className={styles.videoContainer}>
       <div className="text-center mt-4">
-        <video ref={videoRef} autoPlay muted controls={recordedPlaying} className="video-player"></video>
+        <video ref={videoRef} autoPlay muted controls={recordedPlaying} className={styles.videoPlayer}></video>
       </div>
       <div  className="text-center">
         <button onClick={restartRecording}>Restart Recording</button>

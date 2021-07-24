@@ -2,6 +2,8 @@ import React from 'react';
 import {useDropzone} from 'react-dropzone';
 import PropTypes from 'prop-types';
 
+import styles from '../styles/dropzone.module.css';
+
 
 function FileInput({onDropAccepted, onDropRejected, accept}) {
 
@@ -11,14 +13,15 @@ function FileInput({onDropAccepted, onDropRejected, accept}) {
     accept,
     multiple: false //only one file allowed
   });
+  
   return (
-    <div className={ isDragActive?"dropzone dropzone-active":"dropzone"} {...getRootProps()}>
-      <input className="dropzone-input" {...getInputProps()}/>
+    <div className={ isDragActive?`${styles.dropzone} ${styles.dropzoneActive}`:styles.dropzone} {...getRootProps()}>
+      <input {...getInputProps()}/>
       <div className="text-center">
         {isDragActive ? (
-          <p className="dropzone-content">Release to drop the file here</p>
+          <p>Release to drop the file here</p>
         ) : (
-          <p className="dropzone-content">
+          <p>
             Drop your {accept} or click here to select.
           </p>
         )}
