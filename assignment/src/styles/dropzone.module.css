@@ -1,9 +1,9 @@
-.dropzone{
+.dropzone {
   width: 50%;
   padding: 5% 0;
   text-align: center;
   border: dotted;
 }
-.dropzoneActive{
-  background-color: rgba(0,0,0,0.1);
+.dropzoneActive {
+  background-color: rgba(0, 0, 0, 0.1);
 }

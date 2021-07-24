@@ -1,26 +1,26 @@
-.video.beforeCapture{
+.video.beforeCapture {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
-.video .btnStart{
+.video .btnStart {
   color: #fff;
   border-radius: 8px;
   border: transparent;
   padding: 10px 20px;
   text-transform: capitalize;
 }
-.video .btnStart:hover{
-  background-color: #333333!important;
+.video .btnStart:hover {
+  background-color: #333333 !important;
 }
 
-.videoContainer{
+.videoContainer {
   height: 100%;
   overflow: auto;
 }
 
-video.videoPlayer{
+video.videoPlayer {
   max-width: 640px;
   max-height: 480px;
 }

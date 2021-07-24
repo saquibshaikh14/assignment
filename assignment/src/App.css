@@ -6,9 +6,9 @@
  *
  */
 
- #root{
-   display: flex;
- }
+#root {
+  display: flex;
+}
 
 /* .sidebar {
   width: 300px;
@@ -24,7 +24,7 @@
   color: rgb(197, 196, 196);
 } */
 /* -----comon for all------- */
-div.main{
+div.main {
   flex-grow: 1;
   /* white-space: nowrap; */
   height: 100vh;
@@ -86,11 +86,10 @@ div.main{
 } */
 
 /* ---required---overriding the default dynamic content styles */
-.react-pdf__Page__svg{
+.react-pdf__Page__svg {
   margin: 0 auto;
   /* border: 2px solid #ddd; */
 }
-
 
 /* ---pdf screen ends--- */
 

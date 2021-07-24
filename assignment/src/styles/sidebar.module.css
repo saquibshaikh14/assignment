@@ -4,10 +4,10 @@
   flex-direction: column;
   height: 100vh;
 }
-.sidebar a{
+.sidebar a {
   color: #fff;
   transition: background 0.6s linear;
 }
-.sidebar a:hover{
+.sidebar a:hover {
   color: rgb(197, 196, 196);
 }

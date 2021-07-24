@@ -1,39 +1,39 @@
-.viewContainer.pdf{
+.viewContainer.pdf {
   position: relative;
   height: 100%;
   overflow: auto;
 }
-.pdfNav{
+.pdfNav {
   position: fixed;
   height: 50px;
   z-index: 1;
   width: calc(100vw - 300px);
 }
 
-.pdfNav>div{
+.pdfNav > div {
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-.pdfNav .navigationBtn{
+.pdfNav .navigationBtn {
   padding: 5px;
   background: transparent;
   border: 0;
   color: #fff;
   cursor: pointer;
 }
-.pdfNav .navigationBtn:hover{
+.pdfNav .navigationBtn:hover {
   color: #ddd;
 }
-.pdfNav .navigationBtn:disabled{
+.pdfNav .navigationBtn:disabled {
   color: #ccc;
   cursor: not-allowed;
 }
 
-.pdfView{
+.pdfView {
   padding-top: 60px;
   padding-bottom: 30px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
 }

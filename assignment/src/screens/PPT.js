@@ -6,18 +6,17 @@
  *
  */
 
-import React from 'react';
+import React from "react";
 
-const PPT = () =>{
-
+const PPT = () => {
   return (
     <div>
       <p>
-        Incomplete: <br/>
+        Incomplete: <br />
         Cannot find any module for offline ppt view.
       </p>
     </div>
-  )
-}
+  );
+};
 
 export default PPT;

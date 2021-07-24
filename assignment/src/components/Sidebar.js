@@ -6,13 +6,12 @@
  *
  */
 
-import React from 'react';
-import {NavLink} from 'react-router-dom';
-import styles from '../styles/sidebar.module.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styles from "../styles/sidebar.module.css";
 
-function Sidebar(props){
-
-  return(
+function Sidebar(props) {
+  return (
     <div className={`p-3 bg-dark text-white ${styles.sidebar}`}>
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item">
@@ -32,9 +31,7 @@ function Sidebar(props){
         </li>
       </ul>
     </div>
-  )
+  );
 }
-
-
 
 export default Sidebar;
