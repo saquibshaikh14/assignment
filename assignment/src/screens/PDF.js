@@ -8,11 +8,15 @@
 
 import React, { useCallback, useState } from "react";
 
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
+import { pdfjs,Document, Page } from "react-pdf";
 import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 
 import Dropzone from "../components/Dropzone";
 import styles from "../styles/pdf.module.css";
+
+
+//manually loading workerSrc as stated in documentation
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 export default function PDF() {
   const [pdfFile, setFile] = useState(null);
