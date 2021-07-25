@@ -30,13 +30,6 @@ const Video = () => {
 
   return (
     <div className="main">
-      {/* <div>Start button</div> */}
-      {/* vertically center horizontally center */}
-      {/* on click start recording
-          then show stop recording button
-          onClick stop recording show preview button below, on click start video preview
-          show record button to record again
-        */}
       {previewVideo ? (
         <VideoView previewVideo={previewVideo} />
       ) : (
@@ -66,7 +59,7 @@ const getMedia = (cb) => {
   );
 };
 
-var recorder = null;
+let recorder = null;
 let cam = null;
 
 const VideoView = (props) => {
