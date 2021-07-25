@@ -1,5 +1,6 @@
-### Live preview [![Netlify Status](https://api.netlify.com/api/v1/badges/040fd29e-d510-4880-b744-dadd36ef7098/deploy-status)](https://app.netlify.com/sites/saquibshaikh14/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/040fd29e-d510-4880-b744-dadd36ef7098/deploy-status)](https://app.netlify.com/sites/saquibshaikh14/deploys)
 
+### [Live Preview](https://saquibshaikh14.netlify.app/)
 
 ## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
